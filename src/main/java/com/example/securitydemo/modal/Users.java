@@ -8,7 +8,7 @@ public class Users {
 
     @Id
     private int id;
-    private String name;
+    private String username;
     private String password;
 
     public int getId() {
@@ -27,11 +27,20 @@ public class Users {
         this.password = password;
     }
 
-    public String getName() {
-        return name;
+    public String getUsername() {
+        return username;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUsername(String name) {
+        this.username = name;
+    }
+
+    @Override
+    public String toString() {
+        return "Users{" +
+                "id=" + id +
+                ", name='" + username + '\'' +
+                ", password='" + password + '\'' +
+                '}';
     }
 }
